@@ -35,7 +35,7 @@ namespace Examen_Natillera.Clases
         public List<Evento> ConsultarEventosPorFecha(DateTime fecha)
         {
             return dbExamen.Eventos
-                           .Where(e => e.FechaEvento.Date == fecha.Date)
+                           .Where(e => e.FechaEvento == fecha)
                            .ToList();
         }
         public String Insertar()

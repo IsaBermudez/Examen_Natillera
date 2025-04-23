@@ -9,6 +9,7 @@
 
 namespace Examen_Natillera.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -22,7 +23,9 @@ namespace Examen_Natillera.Models
         public System.DateTime FechaEvento { get; set; }
         public string Sede { get; set; }
         public string ActiviadesPlaneadas { get; set; }
-    
+        
+        [JsonIgnore]    
+        
         public virtual Administrador Administrador { get; set; }
     }
 }
