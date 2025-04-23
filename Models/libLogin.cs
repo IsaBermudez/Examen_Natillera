@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Web;
 
 namespace Examen_Natillera.Models
@@ -14,8 +16,14 @@ namespace Examen_Natillera.Models
     public class LoginRespuesta
     {
         public string Usuario { get; set; }
+
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string Perfil { get; set; }
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string PaginaInicio { get; set; }
+
         public bool Autenticado { get; set; }
         public string Token { get; set; }
         public string Mensaje { get; set; }
