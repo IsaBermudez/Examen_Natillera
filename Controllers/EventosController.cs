@@ -29,6 +29,7 @@ namespace Examen_Natillera.Controllers
             return Evento.Consultar(id);
         }
 
+        [HttpGet]
         [Route("ConsultarXTipo")]
         public List<Evento> ConsultarXTipo(string tipo)
         {
@@ -36,7 +37,7 @@ namespace Examen_Natillera.Controllers
             return Evento.ConsultarXTipo(tipo);
         }
 
-
+        [HttpGet]
         [Route("ConsultarXNombre")]
         public Evento ConsultarXNombre(string nombre)
         {
@@ -44,6 +45,7 @@ namespace Examen_Natillera.Controllers
             return Evento.ConsultarXNombre(nombre);
         }
 
+        [HttpGet]
         [Route("ConsultarPorFecha")]
         public List<Evento> ConsultarEventosPorFecha(DateTime fecha)
         {
