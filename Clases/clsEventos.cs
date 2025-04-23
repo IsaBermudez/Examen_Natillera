@@ -48,7 +48,7 @@ namespace Examen_Natillera.Clases
             }
             catch (Exception ex)
             {
-                return "La agencia no se pudo insertar" + ex.Message;
+                return "El evento no se pudo insertar" + ex.Message;
             }
         }
         public String Actualizar()
@@ -91,6 +91,6 @@ namespace Examen_Natillera.Clases
             }
         }
 
-       
+      
     }
 }
