@@ -21,7 +21,23 @@ namespace Examen_Natillera.Clases
         {
             return dbExamen.Eventos.FirstOrDefault(t => t.idEventos == id);
         }
+        public List<Evento> ConsultarXTipo(string tipo)
+        {
+            return dbExamen.Eventos
+                .Where(t => t.TipoEvento == tipo).ToList();
+        }
 
+        public Evento ConsultarXNombre(string nombre)
+        {
+            return dbExamen.Eventos.FirstOrDefault(t => t.NombreEvento == nombre);
+        }
+
+        public List<Evento> ConsultarEventosPorFecha(DateTime fecha)
+        {
+            return dbExamen.Eventos
+                           .Where(e => e.FechaEvento.Date == fecha.Date)
+                           .ToList();
+        }
         public String Insertar()
         {
             try
