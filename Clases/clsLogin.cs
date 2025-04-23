@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examen_Natillera.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,8 @@ namespace Examen_Natillera.Clases
         }
         public Login login { get; set; }
         public LoginRespuesta loginRespuesta { get; set; }
+        private dbNatilleraEntities dbExamen = new dbNatilleraEntities();
+
 
 
         public bool ValidarUsuario()
