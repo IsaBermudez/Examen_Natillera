@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Examen_Natillera.Clases;
+using Examen_Natillera.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,12 +9,10 @@ using System.Web.Http;
 
 namespace Examen_Natillera.Controllers
 {
+    [RoutePrefix("api/Login")]
+    [AllowAnonymous]
     public class LoginController : ApiController
     {
-        [RoutePrefix("api/Login")]
-        [AllowAnonymous]
-        public class LoginController : ApiController
-        {
             [HttpPost]
             [Route("Ingresar")]
 
@@ -22,6 +22,6 @@ namespace Examen_Natillera.Controllers
                 _Login.login = login;
                 return _Login.Ingresar();
             }
-        }
+        
     }
 }
